@@ -12,7 +12,59 @@ $(function () {
     //get user vars
     var $team = $("#team-name").text();
 
-    console.log($team);
+    //set modals btn acitons
+    $("#btn-entrar-1").click(function (e) {
+        e.preventDefault();
+        var match = "MEDALLA1"
+            , text = $("#code-text-1").val();
+        if (match === text) {
+            obtainMedal($team, 1);
+            $("#medal-modal-1").modal('hide');
+            updateMedals($team);
+        } else {
+            alert("¡El código no coincide!");
+        }
+    });
+
+    $("#btn-entrar-2").click(function (e) {
+        e.preventDefault();
+        var match = "MEDALLA2"
+            , text = $("#code-text-2").val();
+        if (match == text) {
+            obtainMedal($team, 2);
+            $("#medal-modal-2").modal('hide');
+            updateMedals($team);
+        } else {
+            alert("¡El código no coincide!");
+        }
+    });
+
+    $("#btn-entrar-3").click(function (e) {
+        e.preventDefault();
+        var match = "MEDALLA3"
+            , text = $("#code-text-3").val();
+        if (match === text) {
+            obtainMedal($team, 3);
+            $("#medal-modal-3").modal('hide');
+            updateMedals($team);
+        } else {
+            alert("¡El código no coincide!");
+        }
+    });
+
+    $("#btn-entrar-4").click(function (e) {
+        e.preventDefault();
+        var match = "MEDALLA4"
+            , text = $("#code-text-4").val();
+        if (match === text) {
+            obtainMedal($team, 4);
+            $("#medal-modal-4").modal('hide');
+            updateMedals($team);
+        } else {
+            alert("¡El código no coincide!");
+        }
+    });
+
     //set medals
     updateMedals($team);
 });
@@ -27,10 +79,7 @@ function updateMedals(team) {
             m2 = snapshot.child("medalla2").val();
             m3 = snapshot.child("medalla3").val();
             m4 = snapshot.child("medalla4").val();
-            console.log(m1);
-            console.log(m2);
-            console.log(m3);
-            console.log(m4);
+
             if (m1) {
                 $("#btn-start-1").text("Información");
                 $("#btn-complete-1").prop({
@@ -109,12 +158,33 @@ function updateMedals(team) {
 
 }
 
-function setMedal(team, medal, val) {
-    //medal: "medal1", "medal2", "medal3" OR "medal4"
+function obtainMedal(team, medal) {
+    //medal: 1, 2, 3, 4
     //val: true OR false
-    firebase.database().ref('teams/' + team).set({
-        medal: val
-    });
+
+    var ref = firebase.database().ref('teams/' + team);
+    switch (medal) {
+    case 1:
+        ref.update({
+            "medalla1": true
+        });
+        break;
+    case 2:
+        ref.update({
+            "medalla2": true
+        });
+        break;
+    case 3:
+        ref.update({
+            "medalla3": true
+        });
+        break;
+    case 4:
+        ref.update({
+            "medalla4": true
+        });
+        break;
+    }
 }
 
 

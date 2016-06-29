@@ -29,7 +29,7 @@
         <!-- Brand -->
         <a href="" class="navbar-brand" id="brand">GeekScouts</a>
         <div class="pull-xs-right">
-            <!-- Botón -->
+            <!-- Button -->
             <button type="button" class="nav-item btn btn-primary" title="Press to log in/register" data-toggle="modal" data-target="#login_register_modal" aria-hidden="true" id="btn-salir">Salir</button>
         </div>
     </nav>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="card-block">
                         <button class="btn btn-primary btn-block" id="btn-start-1">Comenzar</button>
-                        <button class="btn btn-success btn-block" id="btn-complete-1">Completar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-1" data-toggle="modal" data-target="#medal-modal-1">Completar</button>
                         <button class="btn btn-secondary btn-block" id="btn-done-1" disabled hidden>Completada</button>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="card-block">
                         <button class="btn btn-primary btn-block" id="btn-start-2">Comenzar</button>
-                        <button class="btn btn-success btn-block" id="btn-complete-2">Completar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-2" data-toggle="modal" data-target="#medal-modal-2">Completar</button>
                         <button class="btn btn-secondary btn-block" id="btn-done-2" disabled hidden>Completada</button>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="card-block">
                         <button class="btn btn-primary btn-block" id="btn-start-3">Comenzar</button>
-                        <button class="btn btn-success btn-block" id="btn-complete-3">Completar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-3" data-toggle="modal" data-target="#medal-modal-3">Completar</button>
                         <button class="btn btn-secondary btn-block" id="btn-done-3" disabled hidden>Completada</button>
                     </div>
                 </div>
@@ -91,13 +91,123 @@
                     <img src="assets/img/Medalla4.png" alt="" class="card-img-top center-block">
                     <div class="card-block">
                         <h4 class="card-title">Medalla 4</h4>
-                        <p class="card-text">Esta es la cuarta medalla...etc</p>
+                        <p class="card-text">Esta es la cuaaaaaarta medalla,...etc</p>
                     </div>
                     <div class="card-block">
                         <button class="btn btn-primary btn-block" id="btn-start-4">Comenzar</button>
-                        <button class="btn btn-success btn-block" id="btn-complete-4">Completar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-4" data-toggle="modal" data-target="#medal-modal-4">Completar</button>
                         <button class="btn btn-secondary btn-block" id="btn-done-4" disabled hidden>Completada</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- Medal1 -->
+    <div class="modal fade" id="medal-modal-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Completar medalla 1</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text-1" placeholder="Código de medalla 1">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btn-entrar-1">Completar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medal2 -->
+    <div class="modal fade" id="medal-modal-2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Completar medalla 2</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text-2" placeholder="Código de medalla 2">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btn-entrar-2">Completar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medal3 -->
+    <div class="modal fade" id="medal-modal-3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Completar medalla 3</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text-3" placeholder="Código de medalla 3">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btn-entrar-3">Completar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medal4 -->
+    <div class="modal fade" id="medal-modal-4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Completar medalla 4</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text-4" placeholder="Código de medalla 4">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btn-entrar-1">Completar</button>
                 </div>
             </div>
         </div>
