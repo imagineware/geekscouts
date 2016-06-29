@@ -12,15 +12,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-    <!-- Own css -->
+    <!-- Own CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+
 </head>
 
 <body>
 
 
     <!-- Nav -->
-    <nav class="navbar navbar-light navbar-fixed-top" id="navigation">
+    <nav class="navbar navbar-light navbar-fixed-top wow fadeInDown" id="navigation">
         <!-- Brand -->
         <a href="" class="navbar-brand">GeekScouts</a>
         <div class="pull-xs-right">
@@ -31,8 +36,10 @@
 
     <!-- Banner -->
     <div class="row" id="banner-wrapper">
-        <div class="jumbotron text-xs-center col-xs-10 col-xs-offset-1 col col-md-8 col-md-offset-2" id="banner">
-            <h1 class="display-3">Bienvenidos a GeekScouts</h1>
+        <div class="jumbotron text-xs-center col-xs-10 col-xs-offset-1 col col-md-8 col-md-offset-2 wow fadeInUp" id="banner">
+            <h1 class="hidden-sm-up">Bienvenidos a<br />GeekScouts</h1>
+            <h1 class="display-4 hidden-xs-down hidden-md-up">Bienvenidos a<br />GeekScouts</h1>
+            <h1 class="display-2 hidden-sm-down">Bienvenidos a<br />GeekScouts</h1>
             <p class="lead">[escribir algo aquí].</p>
             <hr class="m-y-2">
             <img src="assets/img/banner_img.jpg" alt="" class="img-fluid img-rounded center-block">
@@ -49,6 +56,18 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+    <!-- AnimateScroll JS -->
+    <script src="assets/js/AnimateScroll.js"></script>
+
+    <!-- wow JS -->
+    <script src="assets/js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Own JS -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
