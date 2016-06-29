@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACD,oIAAoI;EACpI,UAAU,EAAE,OAAO;EACnB,kBAAkB;EAClB,UAAU,EAAE,8EAA8E;EAC1F,cAAc;EACd,UAAU,EAAE,iFAAiF;EAC7F,6BAA6B;EAC7B,UAAU,EAAE,yEAAyE;EACrF,sDAAsD;EACtD,MAAM,EAAE,2GAA2G;EACnH,2CAA2C;EAC3C,qBAAqB,EAAE,KAAK;;ACZhC,WAAY;EACR,gBAAgB,EAAE,wBAAwB",
+"sources": ["../sass/base/_page.scss","../sass/layout/_nav.scss"],
+"names": [],
+"file": "main.css"
+}
