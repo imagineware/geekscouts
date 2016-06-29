@@ -30,9 +30,36 @@
         <a href="" class="navbar-brand" id="brand">GeekScouts</a>
         <div class="pull-xs-right">
             <!-- Botón -->
-            <button type="button" class="nav-item btn btn-primary" title="Press to log in/register" data-toggle="modal" data-target="#login_register_modal" aria-hidden="true" id="btn-introducir">Entrar</button>
+            <button type="button" class="nav-item btn btn-primary" title="Press to log in/register" data-toggle="modal" data-target="#login_modal" aria-hidden="true" id="btn-introducir">Entrar</button>
         </div>
     </nav>
+
+    <!-- Modal entrada -->
+    <div class="modal fade" id="login_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Entrar</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text" placeholder="Código del equipo...">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Banner -->
     <div class="row" id="banner-wrapper">
