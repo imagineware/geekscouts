@@ -39,7 +39,7 @@
         <div class="jumbotron text-xs-center col-xs-10 col-xs-offset-1 col col-md-8 col-md-offset-2 wow fadeInUp" id="banner">
             <h1 class="hidden-sm-up">Bienvenidos,<br />equipo GeekScouts</h1>
             <h1 class="display-4 hidden-xs-down hidden-md-up">Bienvenidos,<br />equipo GeekScouts</h1>
-            <h1 class="display-2 hidden-sm-down">Bienvenidos,<br />equipo GeekScouts</h1>
+            <h1 class="display-2 hidden-sm-down">Bienvenidos,<br />equipo <span id="team-name">GeekScouts</span></h1>
             <hr class="m-y-2">
             <p class="lead">[escribir descripción aquí].</p>
             <hr class="m-y-2">
@@ -58,9 +58,9 @@
                         <p class="card-text">Esta es la primera medalla...etc</p>
                     </div>
                     <div class="card-block">
-                        <button class="btn btn-primary btn-block">Comenzar</button>
-                        <button class="btn btn-success btn-block">Completar</button>
-                        <button class="btn btn-secondary btn-block" disabled hidden>Completada</button>
+                        <button class="btn btn-primary btn-block" id="btn-start-1">Comenzar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-1">Completar</button>
+                        <button class="btn btn-secondary btn-block" id="btn-done-1" disabled hidden>Completada</button>
                     </div>
                 </div>
                 <div class="card wow fadeInUp" data-wow-delay="0.5s" id="medal-card-2">
@@ -70,9 +70,9 @@
                         <p class="card-text">Esta es la segunda medalla...etc</p>
                     </div>
                     <div class="card-block">
-                        <button class="btn btn-primary btn-block">Comenzar</button>
-                        <button class="btn btn-success btn-block">Completar</button>
-                        <button class="btn btn-secondary btn-block" disabled hidden>Completada</button>
+                        <button class="btn btn-primary btn-block" id="btn-start-2">Comenzar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-2">Completar</button>
+                        <button class="btn btn-secondary btn-block" id="btn-done-2" disabled hidden>Completada</button>
                     </div>
                 </div>
                 <div class="card wow fadeInUp" data-wow-delay="0.75s" id="medal-card-3">
@@ -82,9 +82,9 @@
                         <p class="card-text">Esta es la tercera medalla,...etc</p>
                     </div>
                     <div class="card-block">
-                        <button class="btn btn-primary btn-block">Comenzar</button>
-                        <button class="btn btn-success btn-block">Completar</button>
-                        <button class="btn btn-secondary btn-block" disabled hidden>Completada</button>
+                        <button class="btn btn-primary btn-block" id="btn-start-3">Comenzar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-3">Completar</button>
+                        <button class="btn btn-secondary btn-block" id="btn-done-3" disabled hidden>Completada</button>
                     </div>
                 </div>
                 <div class="card wow fadeInUp" data-wow-delay="1s" id="medal-card-4">
@@ -94,9 +94,9 @@
                         <p class="card-text">Esta es la cuarta medalla...etc</p>
                     </div>
                     <div class="card-block">
-                        <button class="btn btn-primary btn-block">Comenzar</button>
-                        <button class="btn btn-success btn-block">Completar</button>
-                        <button class="btn btn-secondary btn-block" disabled hidden>Completada</button>
+                        <button class="btn btn-primary btn-block" id="btn-start-4">Comenzar</button>
+                        <button class="btn btn-success btn-block" id="btn-complete-4">Completar</button>
+                        <button class="btn btn-secondary btn-block" id="btn-done-4" disabled hidden>Completada</button>
                     </div>
                 </div>
             </div>
@@ -112,6 +112,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
+    <!-- Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
     <!-- AnimateScroll JS -->
     <script src="assets/js/AnimateScroll.js"></script>
 
@@ -122,7 +125,7 @@
     </script>
 
     <!-- Own JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/equipo.js"></script>
 </body>
 
 </html>
