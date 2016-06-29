@@ -22,4 +22,7 @@ body {
   #banner-wrapper #banner {
     min-height: 60vh; }
 
+.card img {
+  max-width: 25vh; }
+
 /*# sourceMappingURL=main.css.map */
