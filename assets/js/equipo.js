@@ -8,63 +8,72 @@ $(function () {
     };
     firebase.initializeApp(config);
     var database = firebase.database();
-
     //get user vars
-    var $team = $("#team-name").text();
-
+    var $team = $("#team-name").text()
+        , $medalCode1, $medalCode2, $medalCode4;
+    //set medal codes
+    switch ($team) {
+    case "Tesla":
+        break;
+    case "Turing":
+        break;
+    case "Watt":
+        break;
+    case "Byron":
+        break;
+    default:
+        //
+    }
     //set modals btn acitons
     $("#btn-entrar-1").click(function (e) {
         e.preventDefault();
-        var match = "MEDALLA1"
-            , text = $("#code-text-1").val();
-        if (match === text) {
+        var text = $("#code-text-1").val();
+        if ($medalCode1 === text) {
             obtainMedal($team, 1);
             $("#medal-modal-1").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
-
     $("#btn-entrar-2").click(function (e) {
         e.preventDefault();
-        var match = "MEDALLA2"
-            , text = $("#code-text-2").val();
-        if (match == text) {
+        var text = $("#code-text-2").val();
+        if ($medalCode2 == text) {
             obtainMedal($team, 2);
             $("#medal-modal-2").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
-
     $("#btn-entrar-3").click(function (e) {
         e.preventDefault();
-        var match = "MEDALLA3"
-            , text = $("#code-text-3").val();
-        if (match === text) {
+        if (checkQuestions($team)) {
             obtainMedal($team, 3);
-            $("#medal-modal-3").modal('hide');
+            $("#medal-modal-4").modal('hide');
             updateMedals($team);
-        } else {
-            alert("¡El código no coincide!");
         }
+        else {}
     });
-
     $("#btn-entrar-4").click(function (e) {
         e.preventDefault();
-        var match = "MEDALLA4"
-            , text = $("#code-text-4").val();
-        if (match === text) {
+        var text = $("#code-text-4").val();
+        if ($medalCode4 === text) {
             obtainMedal($team, 4);
             $("#medal-modal-4").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
-
+    $("#btn-salir").click(function (e) {
+        e.preventDefault();
+        $(location).attr("href", "/index.html");
+    });
     //set medals
     updateMedals($team);
 });
@@ -72,96 +81,88 @@ $(function () {
 function updateMedals(team) {
     var teamRef = firebase.database().ref('teams/' + team)
         , m1, m2, m3, m4;
-
-    teamRef.once("value")
-        .then(function (snapshot) {
-            m1 = snapshot.child("medalla1").val();
-            m2 = snapshot.child("medalla2").val();
-            m3 = snapshot.child("medalla3").val();
-            m4 = snapshot.child("medalla4").val();
-
-            if (m1) {
-                $("#btn-start-1").text("Información");
-                $("#btn-complete-1").prop({
-                    hidden: true
-                });
-                $("#btn-done-1").prop({
-                    hidden: false
-                });
-            } else {
-                $("#btn-start-1").text("Comenzar");
-                $("#btn-complete-1").prop({
-                    hidden: false
-                });
-                $("#btn-done-1").prop({
-                    hidden: true
-                });
-            }
-
-            if (m2) {
-                $("#btn-start-2").text("Información");
-                $("#btn-complete-2").prop({
-                    hidden: true
-                });
-                $("#btn-done-2").prop({
-                    hidden: false
-                });
-            } else {
-                $("#btn-start-2").text("Comenzar");
-                $("#btn-complete-2").prop({
-                    hidden: false
-                });
-                $("#btn-done-2").prop({
-                    hidden: true
-                });
-            }
-
-            if (m3) {
-                $("#btn-start-3").text("Información");
-                $("#btn-complete-3").prop({
-                    hidden: true
-                });
-                $("#btn-done-3").prop({
-                    hidden: false
-                });
-            } else {
-                $("#btn-start-3").text("Comenzar");
-                $("#btn-complete-3").prop({
-                    hidden: false
-                });
-                $("#btn-done-3").prop({
-                    hidden: true
-                });
-            }
-
-            if (m4) {
-                $("#btn-start-4").text("Información");
-                $("#btn-complete-4").prop({
-                    hidden: true
-                });
-                $("#btn-done-4").prop({
-                    hidden: false
-                });
-            } else {
-                $("#btn-start-4").text("Comenzar");
-                $("#btn-complete-4").prop({
-                    hidden: false
-                });
-                $("#btn-done-4").prop({
-                    hidden: true
-                });
-            }
-        });
-
-
-
-
+    teamRef.once("value").then(function (snapshot) {
+        m1 = snapshot.child("medalla1").val();
+        m2 = snapshot.child("medalla2").val();
+        m3 = snapshot.child("medalla3").val();
+        m4 = snapshot.child("medalla4").val();
+        if (m1) {
+            $("#btn-start-1").text("Información");
+            $("#btn-complete-1").prop({
+                hidden: true
+            });
+            $("#btn-done-1").prop({
+                hidden: false
+            });
+        }
+        else {
+            $("#btn-start-1").text("Comenzar");
+            $("#btn-complete-1").prop({
+                hidden: false
+            });
+            $("#btn-done-1").prop({
+                hidden: true
+            });
+        }
+        if (m2) {
+            $("#btn-start-2").text("Información");
+            $("#btn-complete-2").prop({
+                hidden: true
+            });
+            $("#btn-done-2").prop({
+                hidden: false
+            });
+        }
+        else {
+            $("#btn-start-2").text("Comenzar");
+            $("#btn-complete-2").prop({
+                hidden: false
+            });
+            $("#btn-done-2").prop({
+                hidden: true
+            });
+        }
+        if (m3) {
+            $("#btn-start-3").text("Información");
+            $("#btn-complete-3").prop({
+                hidden: true
+            });
+            $("#btn-done-3").prop({
+                hidden: false
+            });
+        }
+        else {
+            $("#btn-start-3").text("Comenzar");
+            $("#btn-complete-3").prop({
+                hidden: false
+            });
+            $("#btn-done-3").prop({
+                hidden: true
+            });
+        }
+        if (m4) {
+            $("#btn-start-4").text("Información");
+            $("#btn-complete-4").prop({
+                hidden: true
+            });
+            $("#btn-done-4").prop({
+                hidden: false
+            });
+        }
+        else {
+            $("#btn-start-4").text("Comenzar");
+            $("#btn-complete-4").prop({
+                hidden: false
+            });
+            $("#btn-done-4").prop({
+                hidden: true
+            });
+        }
+    });
 }
 
 function obtainMedal(team, medal) {
     //medal: 1, 2, 3, 4
-    //val: true OR false
-
     var ref = firebase.database().ref('teams/' + team);
     switch (medal) {
     case 1:
@@ -187,7 +188,32 @@ function obtainMedal(team, medal) {
     }
 }
 
+function checkQuestions(team) {
+    switch (team) {
+    case "Tesla":
+        return checkQuestionsTesla();
+        break;
+    case "Turing":
+        return checkQuestionsTuring();
+        break;
+    case "Watt":
+        return checkQuestionsWatt();
+        break;
+    case "Byron":
+        return checkQuestionsByron();
+        break;
+    default:
+        //
+    }
+}
 
+function checkQuestionsTeska() {}
+
+function checkQuestionsTuring() {}
+
+function checkQuestionsWatt() {}
+
+function checkQuestionsByron() {}
 /* DATABASE DATA STRUCT {
     "teams": {
         "TEAM-PRUEBA": {

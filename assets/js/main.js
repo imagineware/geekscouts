@@ -7,7 +7,6 @@ $(function () {
         , storageBucket: ""
     , };
     firebase.initializeApp(config);
-
     $("#btn-entrar").click(function (e) {
         e.preventDefault();
         var $team = $("#code-text").val();
@@ -15,17 +14,17 @@ $(function () {
         case "TEAM-PRUEBA":
             $(location).attr("href", "/equipo.html");
             break;
-        case TEAM1:
-            $(location).attr("href", "/#.html");
+        case "TESLACURRENT":
+            $(location).attr("href", "/equipoTesla.html");
             break;
-        case TEAM2:
-            $(location).attr("href", "/#.html");
+        case "TURINGMACHINE":
+            $(location).attr("href", "/equipoTuring.html");
             break;
-        case TEAM3:
-            $(location).attr("href", "/#.html");
+        case "STEAMWATT":
+            $(location).attr("href", "/equipoWatt.html");
             break;
-        case TEAM4:
-            $(location).attr("href", "/#.html");
+        case "CODEBYRON":
+            $(location).attr("href", "/equipoByron.html");
             break;
         default:
             alert("El código introducido no coincide con ningún equipo.")
