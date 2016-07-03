@@ -90,6 +90,10 @@ $(function () {
         e.preventDefault();
         $(location).attr("href", "/index.html");
     });
+    $("#btn-more").click(function (e) {
+        e.preventDefault();
+        animateScroll(document.querySelector('#page-wrapper'), 1000, "easeInOutQuint", 0, null);
+    });
     //set medals
     updateMedals($team);
 });
