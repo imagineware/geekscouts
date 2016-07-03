@@ -14,12 +14,28 @@ $(function () {
     //set medal codes
     switch ($team) {
     case "Tesla":
+        $medalCode1 = "AHSDFN";
+        $medalCode2 = "45613";
+        $medalCode3 = "";
+        $medalCode4 = "AWHP";
         break;
     case "Turing":
+        $medalCode1 = "ASNFAI";
+        $medalCode2 = "01515";
+        $medalCode3 = "";
+        $medalCode4 = "PWHA";
         break;
     case "Watt":
+        $medalCode1 = "OFJASS";
+        $medalCode2 = "68745";
+        $medalCode3 = "";
+        $medalCode4 = "PAHW";
         break;
     case "Byron":
+        $medalCode1 = "PASDDI";
+        $medalCode2 = "98745";
+        $medalCode3 = "";
+        $medalCode4 = "WAPH";
         break;
     default:
         //
