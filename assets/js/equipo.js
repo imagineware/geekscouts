@@ -28,13 +28,13 @@ $(function () {
     case "Watt":
         $medalCode1 = "OFJASS";
         $medalCode2 = "68745";
-        $medalCode3 = "";
+        $medalCode3 = "CACBAABA";
         $medalCode4 = "PAHW";
         break;
     case "Byron":
         $medalCode1 = "PASDDI";
         $medalCode2 = "98745";
-        $medalCode3 = "";
+        $medalCode3 = "CBABCAAC";
         $medalCode4 = "WAPH";
         break;
     default:
@@ -48,7 +48,8 @@ $(function () {
             obtainMedal($team, 1);
             $("#medal-modal-1").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
@@ -59,19 +60,20 @@ $(function () {
             obtainMedal($team, 2);
             $("#medal-modal-2").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
     $("#btn-entrar-3").click(function (e) {
         e.preventDefault();
-        var text = $("#code-text-2").val();
-
+        var text = $("#code-text-3").val();
         if ($medalCode3 == text) {
             obtainMedal($team, 3);
             $("#medal-modal-3").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
@@ -82,7 +84,8 @@ $(function () {
             obtainMedal($team, 4);
             $("#medal-modal-4").modal('hide');
             updateMedals($team);
-        } else {
+        }
+        else {
             alert("¡El código no coincide!");
         }
     });
