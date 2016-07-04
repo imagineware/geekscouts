@@ -16,13 +16,13 @@ $(function () {
     case "Tesla":
         $medalCode1 = "AHSDFN";
         $medalCode2 = "45613";
-        $medalCode3 = "";
+        $medalCode3 = "BCCCABBA";
         $medalCode4 = "AWHP";
         break;
     case "Turing":
         $medalCode1 = "ASNFAI";
         $medalCode2 = "01515";
-        $medalCode3 = "";
+        $medalCode3 = "CCBBCBBA";
         $medalCode4 = "PWHA";
         break;
     case "Watt":
@@ -48,8 +48,7 @@ $(function () {
             obtainMedal($team, 1);
             $("#medal-modal-1").modal('hide');
             updateMedals($team);
-        }
-        else {
+        } else {
             alert("¡El código no coincide!");
         }
     });
@@ -60,19 +59,21 @@ $(function () {
             obtainMedal($team, 2);
             $("#medal-modal-2").modal('hide');
             updateMedals($team);
-        }
-        else {
+        } else {
             alert("¡El código no coincide!");
         }
     });
     $("#btn-entrar-3").click(function (e) {
         e.preventDefault();
-        if (checkQuestions($team)) {
+        var text = $("#code-text-2").val();
+
+        if ($medalCode3 == text) {
             obtainMedal($team, 3);
-            $("#medal-modal-4").modal('hide');
+            $("#medal-modal-3").modal('hide');
             updateMedals($team);
+        } else {
+            alert("¡El código no coincide!");
         }
-        else {}
     });
     $("#btn-entrar-4").click(function (e) {
         e.preventDefault();
@@ -81,8 +82,7 @@ $(function () {
             obtainMedal($team, 4);
             $("#medal-modal-4").modal('hide');
             updateMedals($team);
-        }
-        else {
+        } else {
             alert("¡El código no coincide!");
         }
     });
@@ -207,33 +207,6 @@ function obtainMedal(team, medal) {
         break;
     }
 }
-
-function checkQuestions(team) {
-    switch (team) {
-    case "Tesla":
-        return checkQuestionsTesla();
-        break;
-    case "Turing":
-        return checkQuestionsTuring();
-        break;
-    case "Watt":
-        return checkQuestionsWatt();
-        break;
-    case "Byron":
-        return checkQuestionsByron();
-        break;
-    default:
-        //
-    }
-}
-
-function checkQuestionsTeska() {}
-
-function checkQuestionsTuring() {}
-
-function checkQuestionsWatt() {}
-
-function checkQuestionsByron() {}
 /* DATABASE DATA STRUCT {
     "teams": {
         "TEAM-PRUEBA": {

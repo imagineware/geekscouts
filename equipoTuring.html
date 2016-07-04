@@ -26,9 +26,9 @@
     <!-- Banner -->
     <div class="row" id="banner-wrapper">
         <div class="jumbotron text-xs-center col-xs-10 col-xs-offset-1 col col-md-8 col-md-offset-2 wow fadeInUp" id="banner">
-            <h1 class="hidden-sm-up">Bienvenidos,<br />equipo GeekScouts</h1>
-            <h1 class="display-4 hidden-xs-down hidden-md-up">Bienvenidos,<br />equipo GeekScouts</h1>
-            <h1 class="display-2 hidden-sm-down">Bienvenidos,<br />equipo <span id="team-name">GeekScouts</span></h1>
+            <h1 class="hidden-sm-up">Bienvenidos,<br />equipo Turing</h1>
+            <h1 class="display-4 hidden-xs-down hidden-md-up">Bienvenidos,<br />equipo Turing</h1>
+            <h1 class="display-2 hidden-sm-down">Bienvenidos,<br />equipo <span id="team-name">Turing</span></h1>
             <hr class="m-y-2">
             <p class="lead">En esta página podréis ver la descripción de las pruebas, así como desbloquear las medallas por completarlas. Para empezar, pulsad el botón.</p>
             <hr class="m-y-2"> <a type="button" class="btn btn-secondary" id="btn-more">Ir a las pruebas</a> </div>
@@ -180,9 +180,11 @@
                     <h4 class="modal-title">Completar medalla 3</h4> </div>
                 <div class="modal-body">
                     <form>
-                        <!-- Questions -->
-                        <div class="quizz-container" data-width="100%" data-height="auto" data-quiz="240456"></div>
-                        <script src="//dcc4iyjchzom0.cloudfront.net/widget/loader.js" async></script>
+                        <div class="form-group row">
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <input type="text" class="form-control" id="code-text-3" placeholder="Código de medalla 3">
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -204,7 +206,8 @@
                     <p>Ya conocéis el nombre de vuestro equipo per, ¿conocéis a la persona que le da nombre? Pues bien, después de esta prueba lo haréis, YA QUE tenéis que resolver el test que encontraréis aquí debajo.</p>
                     <p class="text-muted">NOTA: Para obtener el código de la medalla deberéis juntar las letras de las respuestas correctas.</p>
                     <!-- Test -->
-
+                    <div class="quizz-container" data-width="100%" data-height="auto" data-quiz="241123"></div>
+                    <script src="//dcc4iyjchzom0.cloudfront.net/widget/loader.js" async></script>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
