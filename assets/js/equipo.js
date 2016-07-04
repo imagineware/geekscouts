@@ -21,7 +21,7 @@ $(function () {
         break;
     case "Turing":
         $medalCode1 = "ASNFAI";
-        $medalCode2 = "01515";
+        $medalCode2 = "11515";
         $medalCode3 = "CCBBCBBA";
         $medalCode4 = "PWHA";
         break;
