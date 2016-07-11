@@ -17,25 +17,25 @@ $(function () {
         $medalCode1 = "AHSDFN";
         $medalCode2 = "45613";
         $medalCode3 = "BCCCABBA";
-        $medalCode4 = "AWHP";
+        $medalCode4 = "GKQT";
         break;
     case "Turing":
         $medalCode1 = "ASNFAI";
         $medalCode2 = "11515";
         $medalCode3 = "CCBBCBBA";
-        $medalCode4 = "PWHA";
+        $medalCode4 = "KGTQ";
         break;
     case "Watt":
         $medalCode1 = "OFJASS";
         $medalCode2 = "68745";
         $medalCode3 = "CACBAABA";
-        $medalCode4 = "PAHW";
+        $medalCode4 = "QTGK";
         break;
     case "Byron":
         $medalCode1 = "PASDDI";
         $medalCode2 = "98745";
-        $medalCode3 = "CBABCAAC";
-        $medalCode4 = "WAPH";
+        $medalCode3 = "CBABCACC";
+        $medalCode4 = "TGKQ";
         break;
     default:
         //
