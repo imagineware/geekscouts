@@ -80,7 +80,7 @@ $(function () {
     $("#btn-entrar-4").click(function (e) {
         e.preventDefault();
         var text = $("#code-text-4").val();
-        if ($medalCode4 === text) {
+        if ($medalCode4 == text) {
             obtainMedal($team, 4);
             $("#medal-modal-4").modal('hide');
             updateMedals($team);
