@@ -15,27 +15,43 @@ $(function () {
     switch ($team) {
     case "Tesla":
         $medalCode1 = "AHSDFN";
-        $medalCode2 = "45613";
         $medalCode3 = "BCCCABBA";
-        $medalCode4 = "GKQT";
+        $medalCode4 = "AWHP";
         break;
     case "Turing":
         $medalCode1 = "ASNFAI";
-        $medalCode2 = "11515";
         $medalCode3 = "CCBBCBBA";
-        $medalCode4 = "KGTQ";
+        $medalCode4 = "PAHW";
         break;
     case "Watt":
         $medalCode1 = "OFJASS";
-        $medalCode2 = "68745";
         $medalCode3 = "CACBAABA";
-        $medalCode4 = "QTGK";
+        $medalCode4 = "PWHA";
         break;
     case "Byron":
         $medalCode1 = "PASDDI";
-        $medalCode2 = "98745";
         $medalCode3 = "CBABCACC";
-        $medalCode4 = "TGKQ";
+        $medalCode4 = "WAPH";
+        break;
+    case "Torvalds":
+        $medalCode1 = "";
+        $medalCode3 = "BCCABABC";
+        $medalCode4 = "WPHA";
+        break;
+    case "Brodie":
+        $medalCode1 = "";
+        $medalCode3 = "AABACBAB";
+        $medalCode4 = "APWH";
+        break;
+    case "Ritchie":
+        $medalCode1 = "";
+        $medalCode3 = "CBCBACAB";
+        $medalCode4 = "HPAW";
+        break;
+    case "Gates":
+        $medalCode1 = "";
+        $medalCode3 = "CABCBACA";
+        $medalCode4 = "HAWP";
         break;
     default:
         //

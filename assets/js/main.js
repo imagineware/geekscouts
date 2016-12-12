@@ -26,6 +26,18 @@ $(function () {
         case "CODEBYRON":
             $(location).attr("href", "/equipoByron.html");
             break;
+        case "LINUXSYS":
+            $(location).attr("href", "/equipoTorvalds.html");
+            break;
+        case "MSWORD":
+            $(location).attr("href", "/equipoBrodie.html");
+            break;
+        case "UNIXCLAN":
+            $(location).attr("href", "/equipoRitchie.html");
+            break;
+        case "MSDOSGATE":
+            $(location).attr("href", "/equipoGates.html");
+            break;
         default:
             alert("El código introducido no coincide con ningún equipo.")
         }
