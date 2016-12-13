@@ -34,22 +34,22 @@ $(function () {
         $medalCode4 = "WAPH";
         break;
     case "Torvalds":
-        $medalCode1 = "";
+        $medalCode1 = "OISDHI";
         $medalCode3 = "BCCABABC";
         $medalCode4 = "WPHA";
         break;
     case "Brodie":
-        $medalCode1 = "";
+        $medalCode1 = "POASJD";
         $medalCode3 = "AABACBAB";
         $medalCode4 = "APWH";
         break;
     case "Ritchie":
-        $medalCode1 = "";
+        $medalCode1 = "MCINAG";
         $medalCode3 = "CBCBACAB";
         $medalCode4 = "HPAW";
         break;
     case "Gates":
-        $medalCode1 = "";
+        $medalCode1 = "EYUIWE";
         $medalCode3 = "CABCBACA";
         $medalCode4 = "HAWP";
         break;
