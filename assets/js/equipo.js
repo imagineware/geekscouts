@@ -1,10 +1,12 @@
 $(function () {
     //Initialize Firebase
     var config = {
-        apiKey: "AIzaSyAsN8mLHNDRP8adWRor9W_S3wFZojE7MTU"
-        , authDomain: "project-1639472462353612307.firebaseapp.com"
-        , databaseURL: "https://project-1639472462353612307.firebaseio.com"
-        , storageBucket: ""
+      apiKey: "AIzaSyBMoXHt_bIy28UvkG-ax53vxBjF35shXAs",
+      authDomain: "geekscouts-3badd.firebaseapp.com",
+      databaseURL: "https://geekscouts-3badd.firebaseio.com",
+      projectId: "geekscouts-3badd",
+      storageBucket: "geekscouts-3badd.appspot.com",
+      messagingSenderId: "637403357840"
     };
     firebase.initializeApp(config);
     var database = firebase.database();
@@ -107,7 +109,7 @@ $(function () {
     });
     $("#btn-salir").click(function (e) {
         e.preventDefault();
-        $(location).attr("href", "/index.html");
+        $(location).attr("href", "./index.html");
     });
     $("#btn-more").click(function (e) {
         e.preventDefault();
@@ -118,13 +120,13 @@ $(function () {
 });
 
 function updateMedals(team) {
-    var teamRef = firebase.database().ref('teams/' + team)
+    var teamRef = firebase.database().ref(team)
         , m1, m2, m3, m4;
     teamRef.once("value").then(function (snapshot) {
-        m1 = snapshot.child("medalla1").val();
-        m2 = snapshot.child("medalla2").val();
-        m3 = snapshot.child("medalla3").val();
-        m4 = snapshot.child("medalla4").val();
+        m1 = snapshot.child("medal1").val();
+        m2 = snapshot.child("medal2").val();
+        m3 = snapshot.child("medal3").val();
+        m4 = snapshot.child("medal4").val();
         if (m1) {
             $("#btn-start-1").text("Información");
             $("#btn-complete-1").prop({
@@ -202,26 +204,26 @@ function updateMedals(team) {
 
 function obtainMedal(team, medal) {
     //medal: 1, 2, 3, 4
-    var ref = firebase.database().ref('teams/' + team);
+    var ref = firebase.database().ref(team);
     switch (medal) {
     case 1:
         ref.update({
-            "medalla1": true
+            "medal1": true
         });
         break;
     case 2:
         ref.update({
-            "medalla2": true
+            "medal2": true
         });
         break;
     case 3:
         ref.update({
-            "medalla3": true
+            "medal3": true
         });
         break;
     case 4:
         ref.update({
-            "medalla4": true
+            "medal3": true
         });
         break;
     }
